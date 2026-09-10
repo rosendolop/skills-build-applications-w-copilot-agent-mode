@@ -1,5 +1,17 @@
 # React + Vite
 
+## API configuration
+
+The frontend uses `VITE_CODESPACE_NAME` to reach the API through the forwarded
+Codespaces URL. Define it in `.env.local` before starting Vite:
+
+```dotenv
+VITE_CODESPACE_NAME=your-codespace-name
+```
+
+When this variable is not set, resource requests fall back to relative `/api/...`
+paths, which is useful when the frontend and API are served from the same host.
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
