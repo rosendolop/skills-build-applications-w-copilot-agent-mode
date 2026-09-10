@@ -4,6 +4,7 @@ import apiRouter from './routes/index.js'
 
 const app = express()
 const port = 8000
+//se verifican datos de entorno para saber si se esta ejecutando en un codespace o localmente, y se asigna la url base de la api
 const codespaceName = process.env.CODESPACE_NAME
 const apiBaseUrl = codespaceName
   ? `https://${codespaceName}-8000.app.github.dev`
